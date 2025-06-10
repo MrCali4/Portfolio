@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -52,6 +53,17 @@ const Index = () => {
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop&crop=face')"
+          }}
+        />
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/60" />
+        
         <ParticleField />
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -223,7 +235,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Additional interactive skill features */}
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: 'Years of Experience', value: '5+', icon: <Zap className="w-6 h-6" /> },
@@ -268,7 +279,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-card/5">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
@@ -363,7 +373,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-6 border-t border-border">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
