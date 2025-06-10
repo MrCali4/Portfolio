@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -11,7 +10,7 @@ import { Navigation } from '@/components/Navigation';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, Eye, Code, Zap, Users, Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Eye, Code, Zap, Users, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -49,7 +48,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <CustomCursor />
-      <ThemeToggle />
       <Navigation />
       
       {/* Hero Section */}
@@ -58,6 +56,13 @@ const Index = () => {
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="animate-fadeIn">
+            {/* Profile Image Placeholder */}
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary/20 to-electric-400/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-primary/10 to-electric-400/10 flex items-center justify-center text-muted-foreground">
+                <span className="text-4xl font-bold text-primary">N</span>
+              </div>
+            </div>
+
             <h1 className="text-6xl md:text-8xl font-bold mb-6 font-inter">
               <span className="block text-foreground">Nick</span>
               <span className="block bg-gradient-to-r from-primary via-electric-400 to-electric-600 bg-clip-text text-transparent">
@@ -183,7 +188,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">My arsenal of technical skills</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-fadeIn">
               <SkillRadar />
             </div>
@@ -191,18 +196,23 @@ const Index = () => {
             <div className="space-y-6 animate-fadeIn" style={{ animationDelay: '300ms' }}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: 'Frontend', skills: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS'] },
-                  { name: 'Backend', skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'] },
-                  { name: 'DevOps', skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'] },
-                  { name: 'Tools', skills: ['Git', 'VS Code', 'Figma', 'Postman'] },
+                  { name: 'Frontend', skills: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS'], icon: <Code className="w-5 h-5" /> },
+                  { name: 'Backend', skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'], icon: <Zap className="w-5 h-5" /> },
+                  { name: 'DevOps', skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'], icon: <Users className="w-5 h-5" /> },
+                  { name: 'Tools', skills: ['Git', 'VS Code', 'Figma', 'Postman'], icon: <Eye className="w-5 h-5" /> },
                 ].map((category, index) => (
-                  <Card key={index} className="bg-card/50 backdrop-blur-md border-border">
-                    <CardContent className="p-4">
-                      <h4 className="font-bold text-primary mb-2">{category.name}</h4>
-                      <div className="space-y-1">
+                  <Card key={index} className="group bg-card/50 backdrop-blur-md border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow cursor-pointer transform hover:scale-105">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary/20 transition-colors">
+                          {category.icon}
+                        </div>
+                        <h4 className="font-bold text-primary text-lg">{category.name}</h4>
+                      </div>
+                      <div className="space-y-2">
                         {category.skills.map((skill, skillIndex) => (
-                          <div key={skillIndex} className="text-sm text-muted-foreground">
-                            {skill}
+                          <div key={skillIndex} className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                            • {skill}
                           </div>
                         ))}
                       </div>
@@ -211,6 +221,25 @@ const Index = () => {
                 ))}
               </div>
             </div>
+          </div>
+
+          {/* Additional interactive skill features */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'Years of Experience', value: '5+', icon: <Zap className="w-6 h-6" /> },
+              { title: 'Projects Completed', value: '50+', icon: <Code className="w-6 h-6" /> },
+              { title: 'Technologies Mastered', value: '20+', icon: <Users className="w-6 h-6" /> },
+            ].map((stat, index) => (
+              <Card key={index} className="group bg-gradient-to-br from-primary/5 to-electric-400/5 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-glow transform hover:scale-105 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex p-3 bg-primary/10 rounded-full text-primary mb-4 group-hover:bg-primary/20 transition-colors">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                  <div className="text-muted-foreground group-hover:text-foreground transition-colors">{stat.title}</div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -342,12 +371,21 @@ const Index = () => {
             <p className="text-muted-foreground mb-6">
               Full-Stack Developer • Problem Solver • Code Architect
             </p>
-            <div className="flex justify-center space-x-6">
-              <a href="https://github.com" className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                <Github className="w-6 h-6" />
+            <div className="flex justify-center space-x-6 mb-8">
+              <a href="https://github.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                <Github className="w-5 h-5" />
               </a>
-              <a href="mailto:nick@example.com" className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
-                <Mail className="w-6 h-6" />
+              <a href="https://linkedin.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="mailto:nick@example.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+                <Mail className="w-5 h-5" />
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-border text-sm text-muted-foreground">
