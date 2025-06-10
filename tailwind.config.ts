@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Sci-fi theme colors
+				cosmic: {
+					50: '#f0f4ff',
+					100: '#e0e7ff',
+					200: '#c7d2fe',
+					300: '#a5b4fc',
+					400: '#818cf8',
+					500: '#6366f1',
+					600: '#4f46e5',
+					700: '#4338ca',
+					800: '#3730a3',
+					900: '#312e81',
+				},
+				neon: {
+					blue: '#00f5ff',
+					purple: '#bf00ff',
+					pink: '#ff007f',
+					green: '#00ff41',
 				}
 			},
 			borderRadius: {
@@ -84,11 +104,60 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				glow: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				typewriter: {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				blink: {
+					'0%, 50%': { borderColor: 'transparent' },
+					'51%, 100%': { borderColor: 'currentColor' }
+				},
+				fadeIn: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideIn: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				pulse: {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
+				},
+				spin: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				float: 'float 6s ease-in-out infinite',
+				glow: 'glow 2s ease-in-out infinite',
+				typewriter: 'typewriter 4s steps(20) infinite',
+				blink: 'blink 1s step-end infinite',
+				fadeIn: 'fadeIn 0.6s ease-out',
+				slideIn: 'slideIn 0.6s ease-out',
+				pulse: 'pulse 2s ease-in-out infinite',
+				'spin-slow': 'spin 10s linear infinite'
+			},
+			backgroundImage: {
+				'cosmic-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+				'neon-gradient': 'linear-gradient(45deg, #00f5ff, #bf00ff, #ff007f)',
+			},
+			boxShadow: {
+				'neon': '0 0 20px rgba(0, 245, 255, 0.5)',
+				'neon-purple': '0 0 20px rgba(191, 0, 255, 0.5)',
+				'neon-pink': '0 0 20px rgba(255, 0, 127, 0.5)',
 			}
 		}
 	},
