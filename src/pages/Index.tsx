@@ -8,6 +8,7 @@ import { SkillRadar } from '@/components/SkillRadar';
 import { ProjectCard } from '@/components/ProjectCard';
 import { StatsWidget } from '@/components/StatsWidget';
 import { Navigation } from '@/components/Navigation';
+import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Github, Eye, Code, Zap, Users, Mail, Phone, MapPin } from 'lucide-react';
@@ -57,38 +58,38 @@ const Index = () => {
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="animate-fadeIn">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6">
-              <span className="block text-foreground">Nicholas</span>
-              <span className="block bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
-                Maina Mureithi
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 font-inter">
+              <span className="block text-foreground">Nick</span>
+              <span className="block bg-gradient-to-r from-primary via-electric-400 to-electric-600 bg-clip-text text-transparent">
+                Developer
               </span>
             </h1>
             
             <div className="text-2xl md:text-4xl mb-8 h-16 flex items-center justify-center">
-              <span className="text-muted-foreground mr-4">I'm a</span>
+              <span className="text-muted-foreground mr-4 font-medium">I'm a</span>
               <TypewriterText 
-                words={['Developer', 'Designer', 'Problem Solver', 'Creative Thinker']}
-                className="text-primary font-bold"
+                words={['Full-Stack Developer', 'Problem Solver', 'Code Architect', 'Tech Enthusiast']}
+                className="text-primary font-bold font-mono"
               />
             </div>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              Crafting digital experiences that blend innovation with functionality. 
-              I turn complex problems into elegant solutions through code.
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+              Crafting elegant digital solutions with modern technologies. 
+              I transform complex problems into clean, efficient code.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="bg-gradient-to-r from-primary to-electric-500 hover:from-electric-600 hover:to-primary transition-all duration-300 transform hover:scale-105 cursor-pointer font-semibold shadow-glow"
                 onClick={() => document.getElementById('missions')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View My Missions
+                View My Work
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                className="border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105 cursor-pointer font-semibold"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get In Touch
@@ -114,8 +115,8 @@ const Index = () => {
       <section id="backstory" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+              <span className="bg-gradient-to-r from-primary to-electric-500 bg-clip-text text-transparent">
                 Backstory
               </span>
             </h2>
@@ -125,43 +126,42 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fadeIn">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                My journey into software engineering began with curiosity and a broken computer. 
-                What started as an attempt to fix my family's old PC evolved into a passion for 
-                understanding how technology works at its core.
+                My journey into software engineering began with curiosity and a passion for solving problems. 
+                What started as building simple websites evolved into a deep love for crafting scalable, 
+                efficient solutions that make a real impact.
               </p>
               
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Over the past 5 years, I've transformed from a curious tinkerer into a 
-                full-stack developer who thrives on solving complex problems. I believe that 
-                great software is not just about clean code—it's about creating experiences 
-                that make people's lives better.
+                Over the past 5 years, I've evolved from a curious beginner into a full-stack developer 
+                who thrives on turning complex challenges into elegant solutions. I believe great software 
+                is not just about clean code—it's about creating experiences that enhance people's lives.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open-source projects, or mentoring aspiring developers. I'm passionate about 
-                the intersection of technology and human experience.
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                projects, or mentoring aspiring developers. I'm passionate about the intersection of 
+                technology and human experience.
               </p>
             </div>
 
-            <Card className="bg-card/30 backdrop-blur-md border-primary/20 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+            <Card className="bg-card/50 backdrop-blur-md border-border animate-fadeIn" style={{ animationDelay: '200ms' }}>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-center text-primary">Quick Facts</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 text-neon-blue" />
+                    <MapPin className="w-5 h-5 text-electric-500" />
                     <span>Based in Nairobi, Kenya</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Code className="w-5 h-5 text-neon-purple" />
+                    <Code className="w-5 h-5 text-primary" />
                     <span>5+ Years of Experience</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Zap className="w-5 h-5 text-neon-pink" />
+                    <Zap className="w-5 h-5 text-electric-400" />
                     <span>Full-Stack Developer</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Users className="w-5 h-5 text-neon-green" />
+                    <Users className="w-5 h-5 text-electric-600" />
                     <span>Open Source Contributor</span>
                   </div>
                 </div>
@@ -175,8 +175,8 @@ const Index = () => {
       <section id="power-ups" className="py-20 px-6 bg-card/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+              <span className="bg-gradient-to-r from-electric-500 to-primary bg-clip-text text-transparent">
                 Power-Ups
               </span>
             </h2>
@@ -196,7 +196,7 @@ const Index = () => {
                   { name: 'DevOps', skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'] },
                   { name: 'Tools', skills: ['Git', 'VS Code', 'Figma', 'Postman'] },
                 ].map((category, index) => (
-                  <Card key={index} className="bg-card/30 backdrop-blur-md border-primary/20">
+                  <Card key={index} className="bg-card/50 backdrop-blur-md border-border">
                     <CardContent className="p-4">
                       <h4 className="font-bold text-primary mb-2">{category.name}</h4>
                       <div className="space-y-1">
@@ -219,12 +219,12 @@ const Index = () => {
       <section id="missions" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-neon-pink to-neon-green bg-clip-text text-transparent">
-                Missions Completed
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+              <span className="bg-gradient-to-r from-primary to-electric-400 bg-clip-text text-transparent">
+                Featured Projects
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">Projects that showcase my journey</p>
+            <p className="text-xl text-muted-foreground">Solutions that showcase my journey</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -243,8 +243,8 @@ const Index = () => {
       <section id="contact" className="py-20 px-6 bg-card/5">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-neon-green to-neon-blue bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+              <span className="bg-gradient-to-r from-electric-400 to-primary bg-clip-text text-transparent">
                 Let's Connect
               </span>
             </h2>
@@ -263,17 +263,17 @@ const Index = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-primary/10 rounded-lg">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-muted-foreground">nicholas.maina@example.com</div>
+                    <div className="text-muted-foreground">nick@example.com</div>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-primary/10 rounded-lg">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -283,25 +283,25 @@ const Index = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-primary/10 rounded-lg">
                     <Github className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <div className="font-medium">GitHub</div>
-                    <div className="text-muted-foreground">@nicholasmaina</div>
+                    <div className="text-muted-foreground">@nick</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <Card className="bg-card/30 backdrop-blur-md border-primary/20 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+            <Card className="bg-card/50 backdrop-blur-md border-border animate-fadeIn" style={{ animationDelay: '200ms' }}>
               <CardContent className="p-8">
                 <form className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium mb-2">Name</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-3 bg-background/50 border border-primary/20 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-background/50 border border-border rounded-lg focus:border-primary focus:outline-none transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -310,7 +310,7 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Email</label>
                     <input 
                       type="email" 
-                      className="w-full px-4 py-3 bg-background/50 border border-primary/20 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-background/50 border border-border rounded-lg focus:border-primary focus:outline-none transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -319,12 +319,12 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Message</label>
                     <textarea 
                       rows={4}
-                      className="w-full px-4 py-3 bg-background/50 border border-primary/20 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-background/50 border border-border rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
                   
-                  <Button className="w-full bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 cursor-pointer">
+                  <Button className="w-full bg-gradient-to-r from-primary to-electric-500 hover:from-electric-600 hover:to-primary transition-all duration-300 cursor-pointer font-semibold shadow-glow">
                     Send Message
                   </Button>
                 </form>
@@ -335,26 +335,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-primary/20">
+      <footer className="py-12 px-6 border-t border-border">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">Nicholas</span>
-              <span className="text-foreground ml-2">Maina Mureithi</span>
-            </div>
+            <Logo size="lg" className="mb-4 justify-center flex" />
             <p className="text-muted-foreground mb-6">
-              Software Engineer • Creative Problem Solver • Innovation Enthusiast
+              Full-Stack Developer • Problem Solver • Code Architect
             </p>
             <div className="flex justify-center space-x-6">
               <a href="https://github.com" className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="mailto:nicholas.maina@example.com" className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+              <a href="mailto:nick@example.com" className="text-muted-foreground hover:text-primary transition-colors cursor-pointer">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
-            <div className="mt-8 pt-8 border-t border-primary/10 text-sm text-muted-foreground">
-              © 2024 Nicholas Maina Mureithi. Crafted with passion and code.
+            <div className="mt-8 pt-8 border-t border-border text-sm text-muted-foreground">
+              © 2024 Nick. Crafted with passion and modern tech.
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Logo } from './Logo';
 
 export const Navigation = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -43,21 +44,18 @@ export const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-primary/20' : 'bg-transparent'
+      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">
-            <span className="text-primary">Nicholas</span>
-            <span className="text-foreground ml-2">Maina</span>
-          </div>
+          <Logo size="md" />
           
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-3 py-2 transition-colors duration-300 cursor-pointer ${
+                className={`relative px-3 py-2 transition-colors duration-300 cursor-pointer font-medium ${
                   activeSection === item.id
                     ? 'text-primary'
                     : 'text-muted-foreground hover:text-foreground'
@@ -65,7 +63,7 @@ export const Navigation = () => {
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-electric-400" />
                 )}
               </button>
             ))}
