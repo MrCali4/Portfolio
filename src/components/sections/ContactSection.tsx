@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -32,8 +33,22 @@ export const ContactSection = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // Simulate form submission
       console.log('Form submitted:', data);
+      
+      // Save to database
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            message: data.message,
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Message sent!",
@@ -42,6 +57,7 @@ export const ContactSection = () => {
       
       form.reset();
     } catch (error) {
+      console.error('Error saving contact submission:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
