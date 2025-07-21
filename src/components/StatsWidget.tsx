@@ -72,18 +72,18 @@ export const StatsWidget = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto px-4">
       {statItems.map((item, index) => (
         <div
           key={index}
-          className="bg-card/30 backdrop-blur-md border border-primary/20 rounded-lg p-4 text-center transition-all duration-300 hover:border-primary/50 hover:bg-card/50 animate-fadeIn"
+          className="bg-card/30 backdrop-blur-md border border-primary/20 rounded-lg p-3 sm:p-4 text-center transition-all duration-300 hover:border-primary/50 hover:bg-card/50 animate-fadeIn"
           style={{ animationDelay: `${index * 200}ms` }}
         >
-          <item.icon className={`w-8 h-8 mx-auto mb-2 ${item.color}`} />
-          <div className="text-2xl font-bold text-foreground mb-1">
+          <item.icon className={`w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 ${item.color}`} />
+          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-1">
             {item.value}
           </div>
-          <div className="text-sm text-muted-foreground">
+          <div className="text-xs sm:text-sm text-muted-foreground leading-tight">
             {item.label}
           </div>
         </div>

@@ -30,7 +30,7 @@ export const ProjectCard = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-40 sm:h-48 overflow-hidden">
         <img 
           src={imageUrl} 
           alt={title}
@@ -67,18 +67,18 @@ export const ProjectCard = ({
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+      <div className="p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
           {title}
         </h3>
-        <p className="text-muted-foreground mb-4 line-clamp-2">
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 line-clamp-2">
           {description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="px-2 py-1 bg-primary/10 border border-primary/20 rounded text-sm text-primary"
+              className="px-2 py-1 bg-primary/10 border border-primary/20 rounded text-xs sm:text-sm text-primary"
             >
               {tech}
             </span>

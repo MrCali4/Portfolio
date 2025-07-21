@@ -21,7 +21,7 @@ export const HeroSection = () => {
       
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fadeIn">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 font-inter">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 font-inter">
             <span className="block text-foreground tracking-wider font-mono relative">
               <span className="relative inline-block">
                 N
@@ -45,17 +45,17 @@ export const HeroSection = () => {
             </span>
           </h1>
           
-          <div className="text-2xl md:text-4xl mb-8 h-16 flex items-center justify-center">
-            <span className="text-muted-foreground mr-4 font-medium font-mono">[STATUS]:</span>
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-4xl mb-8 h-12 sm:h-14 md:h-16 flex items-center justify-center">
+            <span className="text-muted-foreground mr-2 sm:mr-4 font-medium font-mono text-sm sm:text-base md:text-lg lg:text-xl">[STATUS]:</span>
             <TypewriterText 
               words={['FULL-STACK_DEVELOPER', 'PROBLEM_SOLVER.EXE', 'CODE_ARCHITECT', 'TECH_INNOVATOR']}
               className="text-primary font-bold font-mono"
             />
           </div>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium px-4">
             <span className="text-electric-400 font-mono">//</span> Crafting elegant digital solutions with cutting-edge technologies. 
-            <br />
+            <br className="hidden sm:block" />
             <span className="text-electric-400 font-mono">//</span> Transforming complex algorithms into seamless user experiences.
           </p>
           

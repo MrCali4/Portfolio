@@ -68,20 +68,20 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-20 px-6 bg-card/5">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 font-inter px-4">
             <span className="bg-gradient-to-r from-electric-400 to-primary bg-clip-text text-transparent">
               Let's Connect
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">Ready to start your next project?</p>
+          <p className="text-lg sm:text-xl text-muted-foreground px-4">Ready to start your next project?</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <div className="space-y-8 animate-fadeIn">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-primary">Get In Touch</h3>
-              <p className="text-lg text-muted-foreground mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-primary">Get In Touch</h3>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
                 I'm always open to discussing new opportunities, creative projects, 
                 or just having a chat about technology and innovation.
               </p>
@@ -121,7 +121,7 @@ export const ContactSection = () => {
           </div>
 
           <Card className="bg-card/50 backdrop-blur-md border-border animate-fadeIn" style={{ animationDelay: '200ms' }}>
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
