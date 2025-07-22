@@ -33,19 +33,28 @@ const skills = [
 const skillLevels = [95, 90, 85, 80, 88, 75, 82, 70];
 
 export const SkillRadar = () => {
+  const isLightMode = document.documentElement.classList.contains('light');
+  
   const data = {
     labels: skills,
     datasets: [
       {
         label: 'Skill Level',
         data: skillLevels,
-        backgroundColor: 'rgba(0, 245, 255, 0.2)',
-        borderColor: 'rgba(0, 245, 255, 0.8)',
-        borderWidth: 2,
+        backgroundColor: isLightMode 
+          ? 'rgba(0, 245, 255, 0.3)' 
+          : 'rgba(0, 245, 255, 0.2)',
+        borderColor: isLightMode 
+          ? 'rgba(0, 245, 255, 1)' 
+          : 'rgba(0, 245, 255, 0.8)',
+        borderWidth: isLightMode ? 3 : 2,
         pointBackgroundColor: 'rgba(0, 245, 255, 1)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
+        pointBorderColor: isLightMode ? 'rgba(0, 0, 0, 0.3)' : '#fff',
+        pointBorderWidth: 2,
+        pointRadius: isLightMode ? 6 : 4,
+        pointHoverBackgroundColor: isLightMode ? 'rgba(0, 245, 255, 1)' : '#fff',
         pointHoverBorderColor: 'rgba(0, 245, 255, 1)',
+        pointHoverRadius: 8,
       },
     ],
   };
@@ -58,7 +67,7 @@ export const SkillRadar = () => {
         display: false,
       },
       tooltip: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
         titleColor: '#00f5ff',
         bodyColor: '#ffffff',
         borderColor: '#00f5ff',
@@ -68,15 +77,22 @@ export const SkillRadar = () => {
     scales: {
       r: {
         angleLines: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: document.documentElement.classList.contains('light') 
+            ? 'rgba(0, 0, 0, 0.2)' 
+            : 'rgba(255, 255, 255, 0.2)',
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: document.documentElement.classList.contains('light') 
+            ? 'rgba(0, 0, 0, 0.15)' 
+            : 'rgba(255, 255, 255, 0.15)',
         },
         pointLabels: {
-          color: '#ffffff',
+          color: document.documentElement.classList.contains('light') 
+            ? 'rgba(0, 0, 0, 0.8)' 
+            : '#ffffff',
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 10 : 12,
+            weight: 'bold' as const,
           },
         },
         ticks: {
@@ -89,7 +105,7 @@ export const SkillRadar = () => {
   };
 
   return (
-    <div className="h-80 w-full">
+    <div className="h-full w-full">
       <Radar data={data} options={options} />
     </div>
   );
