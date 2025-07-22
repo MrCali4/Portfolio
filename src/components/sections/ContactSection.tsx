@@ -94,7 +94,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium">Email</div>
-                  <div className="text-muted-foreground">nick@example.com</div>
+                  <div className="text-muted-foreground">nicholasmureithi68@gmail.com</div>
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium">Phone</div>
-                  <div className="text-muted-foreground">+254 712 345 678</div>
+                  <div className="text-muted-foreground">+254 742 695 562</div>
                 </div>
               </div>
 
@@ -114,7 +114,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium">GitHub</div>
-                  <div className="text-muted-foreground">@nick</div>
+                  <div className="text-muted-foreground">@MrCali4</div>
                 </div>
               </div>
             </div>

@@ -12,19 +12,19 @@ export const FooterSection = () => {
             Full-Stack Developer • Problem Solver • Code Architect
           </p>
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="https://github.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+            <a href="https://github.com/MrCali4" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+            <a href="https://www.linkedin.com/in/nicholas-mureithi-323972344" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Linkedin className="w-5 h-5" />
             </a>
             <a href="https://twitter.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="https://instagram.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+            <a href="https://www.instagram.com/nklaus0/" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="mailto:nick@example.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+            <a href="mailto:nicholasmureithi68@gmail.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Mail className="w-5 h-5" />
             </a>
           </div>
