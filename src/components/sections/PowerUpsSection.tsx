@@ -18,22 +18,20 @@ export const PowerUpsSection = () => {
   ];
 
   return (
-    <section id="power-ups" className="py-20 px-6 bg-card/5">
+    <section id="power-ups" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-card/5">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 font-inter">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 font-inter">
             <span className="bg-gradient-to-r from-electric-500 to-primary bg-clip-text text-transparent">
               Power-Ups
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">My arsenal of technical skills</p>
+          <p className="text-lg sm:text-xl text-muted-foreground">My arsenal of technical skills</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
           <div className="animate-fadeIn order-2 lg:order-1">
-            <div className="h-64 sm:h-80 lg:h-96">
-              <SkillRadar />
-            </div>
+            <SkillRadar />
           </div>
           
           <div className="space-y-4 lg:space-y-6 animate-fadeIn order-1 lg:order-2" style={{ animationDelay: '300ms' }}>
