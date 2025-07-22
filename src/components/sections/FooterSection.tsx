@@ -18,7 +18,7 @@ export const FooterSection = () => {
             <a href="https://www.linkedin.com/in/nicholas-mureithi-323972344" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://twitter.com" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
+            <a href="https://x.com/MrCalipers" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
               <Twitter className="w-5 h-5" />
             </a>
             <a href="https://www.instagram.com/nklaus0/" className="group p-3 bg-primary/10 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-all duration-300 cursor-pointer">
