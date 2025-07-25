@@ -22,7 +22,61 @@ export const BackstorySection = () => {
             <div className="relative">
               <div className="absolute left-4 top-8 bottom-0 w-0.5 bg-gradient-to-b from-primary to-electric-500 opacity-20"></div>
               
-              {/* Journey Step 1 */}
+              {/* Education Step 1 - Primary */}
+              <div className="relative pl-12 pb-8 group">
+                <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-primary to-electric-500 rounded-full flex items-center justify-center shadow-lg">
+                  <Lightbulb className="w-4 h-4 text-white" />
+                </div>
+                <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                  <h3 className="text-xl font-bold text-primary mb-2">Primary Education</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Foundation years that sparked curiosity and love for learning.
+                    Early exposure to computers and problem-solving laid the groundwork for future interests.
+                  </p>
+                  <div className="flex gap-2 mt-3">
+                    <Badge variant="secondary" className="text-xs">2005-2012</Badge>
+                    <Badge variant="secondary" className="text-xs">7 Years</Badge>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education Step 2 - Secondary */}
+              <div className="relative pl-12 pb-8 group">
+                <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-electric-400 to-primary rounded-full flex items-center justify-center shadow-lg">
+                  <Code className="w-4 h-4 text-white" />
+                </div>
+                <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-electric-500/10">
+                  <h3 className="text-xl font-bold text-electric-500 mb-2">Secondary Education</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Developed analytical thinking and discovered passion for mathematics and sciences.
+                    First programming experiences began shaping the future path.
+                  </p>
+                  <div className="flex gap-2 mt-3">
+                    <Badge variant="secondary" className="text-xs">2013-2016</Badge>
+                    <Badge variant="secondary" className="text-xs">4 Years</Badge>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education Step 3 - University */}
+              <div className="relative pl-12 pb-8 group">
+                <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-electric-600 to-electric-400 rounded-full flex items-center justify-center shadow-lg">
+                  <Users className="w-4 h-4 text-white" />
+                </div>
+                <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-lg p-6 hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-electric-600/10">
+                  <h3 className="text-xl font-bold text-electric-600 mb-2">University Education</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Formal computer science education combined with practical projects.
+                    Built strong foundations in algorithms, data structures, and software engineering principles.
+                  </p>
+                  <div className="flex gap-2 mt-3">
+                    <Badge variant="secondary" className="text-xs">2017-2021</Badge>
+                    <Badge variant="secondary" className="text-xs">4 Years</Badge>
+                  </div>
+                </div>
+              </div>
+
+              {/* Journey Step 4 - The Spark */}
               <div className="relative pl-12 pb-8 group">
                 <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-primary to-electric-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   <Lightbulb className="w-4 h-4 text-white" />
@@ -40,7 +94,7 @@ export const BackstorySection = () => {
                 </div>
               </div>
 
-              {/* Journey Step 2 */}
+              {/* Journey Step 5 - The Evolution */}
               <div className="relative pl-12 pb-8 group">
                 <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-electric-400 to-primary rounded-full flex items-center justify-center shadow-lg">
                   <Code className="w-4 h-4 text-white" />
@@ -59,7 +113,7 @@ export const BackstorySection = () => {
                 </div>
               </div>
 
-              {/* Journey Step 3 */}
+              {/* Journey Step 6 - The Mission */}
               <div className="relative pl-12 group">
                 <div className="absolute left-0 top-6 w-8 h-8 bg-gradient-to-r from-electric-600 to-electric-400 rounded-full flex items-center justify-center shadow-lg">
                   <Heart className="w-4 h-4 text-white" />
