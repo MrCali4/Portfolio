@@ -109,9 +109,9 @@ export const BackstorySection = () => {
                     My journey into software engineering began with curiosity and a passion for solving problems. 
                     What started as building simple websites evolved into a deep love for crafting scalable solutions.
                   </p>
-                  <div className="flex gap-3 mt-4 relative z-10">
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">HTML/CSS</Badge>
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-electric-500/10 text-electric-500 border-electric-500/20 hover:bg-electric-500/20 transition-colors">JavaScript</Badge>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 relative z-10">
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors font-medium">HTML/CSS</Badge>
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-electric-500/10 text-electric-500 border-electric-500/20 hover:bg-electric-500/20 transition-colors font-medium">JavaScript</Badge>
                   </div>
                 </div>
               </div>
@@ -129,10 +129,10 @@ export const BackstorySection = () => {
                     Over the past 5 years, I've evolved from a curious beginner into a full-stack developer 
                     who thrives on turning complex challenges into elegant solutions.
                   </p>
-                  <div className="flex gap-3 mt-4 relative z-10">
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-electric-500/10 text-electric-500 border-electric-500/20 hover:bg-electric-500/20 transition-colors">React</Badge>
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">Node.js</Badge>
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-electric-400/10 text-electric-400 border-electric-400/20 hover:bg-electric-400/20 transition-colors">Python</Badge>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 relative z-10">
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-electric-500/10 text-electric-500 border-electric-500/20 hover:bg-electric-500/20 transition-colors font-medium">React</Badge>
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors font-medium">Node.js</Badge>
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-electric-400/10 text-electric-400 border-electric-400/20 hover:bg-electric-400/20 transition-colors font-medium">Python</Badge>
                   </div>
                 </div>
               </div>
@@ -150,9 +150,9 @@ export const BackstorySection = () => {
                     I believe great software is not just about clean code—it's about creating experiences that enhance people's lives. 
                     Currently mentoring aspiring developers and contributing to open-source projects.
                   </p>
-                  <div className="flex gap-3 mt-4 relative z-10">
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-electric-600/10 text-electric-600 border-electric-600/20 hover:bg-electric-600/20 transition-colors">Mentoring</Badge>
-                    <Badge variant="secondary" className="text-sm px-4 py-2 bg-electric-400/10 text-electric-400 border-electric-400/20 hover:bg-electric-400/20 transition-colors">Open Source</Badge>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 relative z-10">
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-electric-600/10 text-electric-600 border-electric-600/20 hover:bg-electric-600/20 transition-colors font-medium">Mentoring</Badge>
+                    <Badge variant="secondary" className="text-sm px-3 sm:px-4 py-2 bg-electric-400/10 text-electric-400 border-electric-400/20 hover:bg-electric-400/20 transition-colors font-medium">Open Source</Badge>
                   </div>
                 </div>
               </div>
