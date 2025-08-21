@@ -5,11 +5,11 @@ import { MapPin, Code, Zap, Users, Heart, Coffee, Lightbulb } from 'lucide-react
 
 export const BackstorySection = () => {
   return (
-    <section id="backstory" className="relative py-20 px-6 overflow-hidden">
+    <section id="backstory" className="relative py-16 md:py-20 px-4 md:px-6 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-electric-500/5 pointer-events-none" />
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-electric-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute hidden md:block top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute hidden md:block bottom-20 right-10 w-40 h-40 bg-electric-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-20">
@@ -27,17 +27,17 @@ export const BackstorySection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-electric-500 mx-auto mt-6 rounded-full animate-fade-in" style={{ animationDelay: '400ms' }} />
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12 mb-16">
           {/* Enhanced Journey Timeline */}
-          <div className="lg:col-span-2 space-y-12 animate-fade-in">
+          <div className="lg:col-span-2 space-y-8 md:space-y-10 lg:space-y-12 animate-fade-in">
             <div className="relative">
               {/* Enhanced Timeline Line */}
-              <div className="absolute left-6 top-8 bottom-0 w-1 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full opacity-30">
+              <div className="absolute hidden md:block left-6 top-8 bottom-0 w-1 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full opacity-30">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full animate-pulse opacity-50" />
               </div>
               
               {/* Education Step 1 - Primary */}
-              <div className="relative pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '600ms' }}>
+              <div className="relative pl-12 md:pl-16 pb-10 md:pb-12 group animate-fade-in" style={{ animationDelay: '600ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 rotate-3 group-hover:rotate-6">
                   <Lightbulb className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-electric-500 rounded-xl blur-md opacity-75 -z-10" />
@@ -57,7 +57,7 @@ export const BackstorySection = () => {
               </div>
 
               {/* Education Step 2 - Secondary */}
-              <div className="relative pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '800ms' }}>
+              <div className="relative pl-12 md:pl-16 pb-10 md:pb-12 group animate-fade-in" style={{ animationDelay: '800ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 -rotate-3 group-hover:-rotate-6">
                   <Code className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-400 to-primary rounded-xl blur-md opacity-75 -z-10" />
@@ -77,7 +77,7 @@ export const BackstorySection = () => {
               </div>
 
               {/* Education Step 3 - University */}
-              <div className="relative pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1000ms' }}>
+              <div className="relative pl-12 md:pl-16 pb-10 md:pb-12 group animate-fade-in" style={{ animationDelay: '1000ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 rotate-2 group-hover:rotate-4">
                   <Users className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl blur-md opacity-75 -z-10" />
@@ -97,7 +97,7 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 4 - The Spark */}
-              <div className="relative pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1200ms' }}>
+              <div className="relative pl-12 md:pl-16 pb-10 md:pb-12 group animate-fade-in" style={{ animationDelay: '1200ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 -rotate-2 group-hover:-rotate-4 animate-pulse">
                   <Lightbulb className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-electric-500 rounded-xl blur-md opacity-75 -z-10" />
@@ -117,7 +117,7 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 5 - The Evolution */}
-              <div className="relative pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1400ms' }}>
+              <div className="relative pl-12 md:pl-16 pb-10 md:pb-12 group animate-fade-in" style={{ animationDelay: '1400ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 rotate-1 group-hover:rotate-3">
                   <Code className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-400 to-primary rounded-xl blur-md opacity-75 -z-10" />
@@ -138,7 +138,7 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 6 - The Mission */}
-              <div className="relative pl-16 group animate-fade-in" style={{ animationDelay: '1600ms' }}>
+              <div className="relative pl-12 md:pl-16 group animate-fade-in" style={{ animationDelay: '1600ms' }}>
                 <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 -rotate-1 group-hover:-rotate-2">
                   <Heart className="w-6 h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl blur-md opacity-75 -z-10" />
@@ -164,7 +164,7 @@ export const BackstorySection = () => {
             <Card className="bg-gradient-to-br from-card/60 to-card/30 backdrop-blur-xl border-border/40 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 relative overflow-hidden animate-fade-in" style={{ animationDelay: '300ms' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-electric-500/5 pointer-events-none" />
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-2xl" />
-              <CardContent className="p-8 relative z-10">
+              <CardContent className="p-6 md:p-8 relative z-10">
                 <div className="text-center mb-8">
                   <div className="w-20 h-20 bg-gradient-to-br from-primary via-electric-400 to-electric-500 rounded-2xl flex items-center justify-center mx-auto mb-6 relative group">
                     <Code className="w-10 h-10 text-white relative z-10" />
@@ -181,7 +181,7 @@ export const BackstorySection = () => {
                     { Icon: Users, label: "Community", value: "Open Source Contributor", color: "electric-600" }
                   ].map((item, index) => (
                     <div key={item.label} className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-card/40 to-card/20 backdrop-blur-sm hover:from-card/60 hover:to-card/40 transition-all duration-300 group border border-border/20 hover:border-border/40" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                      <div className={`w-12 h-12 bg-${item.color}/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-12 h-12 bg-${item.color}/20 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                         <item.Icon className={`w-6 h-6 text-${item.color}`} />
                       </div>
                       <div className="flex-1">
@@ -198,7 +198,7 @@ export const BackstorySection = () => {
             <Card className="bg-gradient-to-br from-electric-500/20 to-primary/20 backdrop-blur-xl border-electric-500/30 hover:border-electric-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-electric-500/25 relative overflow-hidden animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-electric-500/10 to-primary/10 pointer-events-none" />
               <div className="absolute -top-12 -right-12 w-24 h-24 bg-electric-500/30 rounded-full blur-2xl animate-pulse" />
-              <CardContent className="p-8 text-center relative z-10">
+              <CardContent className="p-6 md:p-8 text-center relative z-10">
                 <div className="relative inline-block mb-6">
                   <Coffee className="w-12 h-12 text-electric-500 mx-auto animate-pulse" />
                   <div className="absolute inset-0 w-12 h-12 bg-electric-500/30 rounded-full blur-lg animate-pulse" />
