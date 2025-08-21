@@ -5,29 +5,29 @@ import { MapPin, Code, Zap, Users, Heart, Coffee, Lightbulb } from 'lucide-react
 
 export const BackstorySection = () => {
   return (
-    <section id="backstory" className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="backstory" className="relative py-20 px-6 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-electric-500/5 pointer-events-none" />
-      <div className="absolute top-20 left-4 sm:left-10 w-24 sm:w-32 h-24 sm:h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-4 sm:right-10 w-32 sm:w-40 h-32 sm:h-40 bg-electric-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-electric-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-20">
           <div className="inline-block relative">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 font-inter relative">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 font-inter relative">
               <span className="bg-gradient-to-r from-primary via-electric-400 to-electric-500 bg-clip-text text-transparent animate-fade-in">
                 Backstory
               </span>
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-electric-500/20 blur-xl -z-10 animate-pulse" />
             </h2>
           </div>
-          <p className="text-lg sm:text-xl text-muted-foreground animate-fade-in max-w-2xl mx-auto" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: '200ms' }}>
             The journey that shaped my code
           </p>
-          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-primary to-electric-500 mx-auto mt-4 sm:mt-6 rounded-full animate-fade-in" style={{ animationDelay: '400ms' }} />
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-electric-500 mx-auto mt-6 rounded-full animate-fade-in" style={{ animationDelay: '400ms' }} />
         </div>
 
-        <div className="grid xl:grid-cols-3 gap-8 lg:gap-12 mb-12 sm:mb-16">
+        <div className="grid lg:grid-cols-3 gap-12 mb-16">
           {/* Enhanced Journey Timeline */}
           <div className="lg:col-span-2 space-y-12 animate-fade-in">
             <div className="relative">
