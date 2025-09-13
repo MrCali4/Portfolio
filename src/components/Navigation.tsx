@@ -4,6 +4,13 @@ import { Logo } from './Logo';
 import { ThemeToggle } from './ThemeToggle';
 import { ColorThemeSelector } from './ColorThemeSelector';
 import { Menu, X } from 'lucide-react';
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
 
 export const Navigation = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -82,46 +89,57 @@ export const Navigation = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <button 
-            className="lg:hidden p-2 text-foreground hover:bg-muted/50 rounded-lg transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-2 mt-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-4 py-3 rounded-lg transition-all duration-300 cursor-pointer font-medium ${
-                    activeSection === item.id
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-              <div className="flex items-center justify-between pt-4 mt-4 border-t border-border">
-                <span className="text-sm text-muted-foreground">Theme</span>
-                <div className="flex items-center space-x-3">
-                  <ColorThemeSelector />
-                  <ThemeToggle />
+          <Drawer open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <DrawerTrigger asChild>
+              <button className="lg:hidden p-2 text-foreground hover:bg-muted/50 rounded-lg transition-colors">
+                <Menu className="w-6 h-6" />
+              </button>
+            </DrawerTrigger>
+            <DrawerContent className="h-full w-80 max-w-[80vw] bg-background border-r border-border rounded-none left-0 right-auto translate-x-0 data-[state=closed]:-translate-x-full">
+              <div className="flex flex-col h-full">
+                <DrawerHeader className="border-b border-border">
+                  <div className="flex items-center justify-between">
+                    <Logo size="sm" />
+                    <button
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="p-2 text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+                </DrawerHeader>
+                
+                <div className="flex-1 p-6">
+                  <nav className="space-y-2">
+                    {navItems.map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => scrollToSection(item.id)}
+                        className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 cursor-pointer font-medium ${
+                          activeSection === item.id
+                            ? 'text-primary bg-primary/10'
+                            : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </nav>
+                  
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm font-medium text-foreground">Theme</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <ColorThemeSelector />
+                      <ThemeToggle />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        )}
+            </DrawerContent>
+          </Drawer>
+        </div>
       </div>
     </nav>
   );
