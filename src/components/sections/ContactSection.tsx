@@ -77,8 +77,8 @@ export const ContactSection = () => {
           <p className="text-lg sm:text-xl text-muted-foreground px-4">Ready to start your next project?</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          <div className="space-y-8 animate-fadeIn">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-8 animate-fadeIn md:order-1 order-2">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-primary">Get In Touch</h3>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
@@ -120,77 +120,79 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <Card className="bg-card/50 backdrop-blur-md border-border animate-fadeIn" style={{ animationDelay: '200ms' }}>
-            <CardContent className="p-4 sm:p-6 lg:p-8">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your name"
-                            className="bg-background/50 border-border focus:border-primary"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="email"
-                            placeholder="your.email@example.com"
-                            className="bg-background/50 border-border focus:border-primary"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            rows={4}
-                            placeholder="Tell me about your project..."
-                            className="bg-background/50 border-border focus:border-primary resize-none"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <Button 
-                    type="submit"
-                    disabled={form.formState.isSubmitting}
-                    className="w-full bg-gradient-to-r from-primary to-electric-500 hover:from-electric-600 hover:to-primary transition-all duration-300 cursor-pointer font-semibold shadow-glow"
-                  >
-                    {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
-                  </Button>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
+          <div className="md:order-2 order-1 flex justify-center">
+            <Card className="bg-card/50 backdrop-blur-md border-border animate-fadeIn w-full max-w-lg" style={{ animationDelay: '200ms' }}>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Your name"
+                              className="bg-background/50 border-border focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="email"
+                              placeholder="your.email@example.com"
+                              className="bg-background/50 border-border focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              rows={4}
+                              placeholder="Tell me about your project..."
+                              className="bg-background/50 border-border focus:border-primary resize-none"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <Button 
+                      type="submit"
+                      disabled={form.formState.isSubmitting}
+                      className="w-full bg-gradient-to-r from-primary to-electric-500 hover:from-electric-600 hover:to-primary transition-all duration-300 cursor-pointer font-semibold shadow-glow"
+                    >
+                      {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+                    </Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
