@@ -32,14 +32,14 @@ export const BackstorySection = () => {
           <div className="lg:col-span-2 space-y-10 md:space-y-12 lg:space-y-12 animate-fade-in">
             <div className="relative">
               {/* Enhanced Timeline Line */}
-              <div className="absolute hidden sm:block left-6 top-8 bottom-0 w-1 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full opacity-30">
+              <div className="absolute left-3 sm:left-6 top-8 bottom-0 w-1 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full opacity-30">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary via-electric-400 to-electric-500 rounded-full animate-pulse opacity-50" />
               </div>
               
               {/* Education Step 1 - Primary */}
-              <div className="relative pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '600ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 rotate-3 group-hover:rotate-6">
-                  <Lightbulb className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '600ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 rotate-3 group-hover:rotate-6">
+                  <Lightbulb className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-electric-500 rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
@@ -57,9 +57,9 @@ export const BackstorySection = () => {
               </div>
 
               {/* Education Step 2 - Secondary */}
-              <div className="relative pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '800ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 -rotate-3 group-hover:-rotate-6">
-                  <Code className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '800ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 -rotate-3 group-hover:-rotate-6">
+                  <Code className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-400 to-primary rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-electric-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-electric-500/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
@@ -77,9 +77,9 @@ export const BackstorySection = () => {
               </div>
 
               {/* Education Step 3 - University */}
-              <div className="relative pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1000ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 rotate-2 group-hover:rotate-4">
-                  <Users className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1000ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 rotate-2 group-hover:rotate-4">
+                  <Users className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-electric-600/40 transition-all duration-500 hover:shadow-2xl hover:shadow-electric-600/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
@@ -97,9 +97,9 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 4 - The Spark */}
-              <div className="relative pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1200ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 -rotate-2 group-hover:-rotate-4 animate-pulse">
-                  <Lightbulb className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1200ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-electric-500 rounded-xl flex items-center justify-center shadow-2xl shadow-primary/25 group-hover:scale-110 transition-all duration-500 -rotate-2 group-hover:-rotate-4 animate-pulse">
+                  <Lightbulb className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-electric-500 rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
@@ -117,9 +117,9 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 5 - The Evolution */}
-              <div className="relative pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1400ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 rotate-1 group-hover:rotate-3">
-                  <Code className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 pb-12 group animate-fade-in" style={{ animationDelay: '1400ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-electric-400 to-primary rounded-xl flex items-center justify-center shadow-2xl shadow-electric-400/25 group-hover:scale-110 transition-all duration-500 rotate-1 group-hover:rotate-3">
+                  <Code className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-400 to-primary rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-electric-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-electric-500/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
@@ -138,9 +138,9 @@ export const BackstorySection = () => {
               </div>
 
               {/* Journey Step 6 - The Mission */}
-              <div className="relative pl-14 md:pl-16 group animate-fade-in" style={{ animationDelay: '1600ms' }}>
-                <div className="absolute left-0 top-8 w-12 h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 -rotate-1 group-hover:-rotate-2">
-                  <Heart className="w-6 h-6 text-white" />
+              <div className="relative pl-8 sm:pl-14 md:pl-16 group animate-fade-in" style={{ animationDelay: '1600ms' }}>
+                <div className="absolute left-0 sm:left-3 top-8 w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl flex items-center justify-center shadow-2xl shadow-electric-600/25 group-hover:scale-110 transition-all duration-500 -rotate-1 group-hover:-rotate-2">
+                  <Heart className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   <div className="absolute inset-0 bg-gradient-to-br from-electric-600 to-electric-400 rounded-xl blur-md opacity-75 -z-10" />
                 </div>
                 <div className="bg-gradient-to-br from-card/50 to-card/20 backdrop-blur-lg border border-border/30 rounded-2xl p-8 hover:border-electric-600/40 transition-all duration-500 hover:shadow-2xl hover:shadow-electric-600/10 group-hover:transform group-hover:-translate-y-2 relative overflow-hidden">
